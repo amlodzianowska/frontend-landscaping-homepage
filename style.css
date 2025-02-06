@@ -1,74 +1,87 @@
+/* Global Reset */
 html, body {
     overflow-x: hidden;
-    margin: 0; /* Prevent any default browser margins */
+    margin: 0;
     padding: 0;
     width: 100%;
+    background-color: rgb(209, 191, 177);
 }
 
+/* Header */
 header {
     width: 100%;
-    background-color: #f8f8f8; /* Light background */
-    padding: 15px 0; /* Spacing around the content */
+    background-color: rgb(209, 191, 177);
+    padding: 15px 0;
     display: flex;
-    justify-content: center; /* Centers the .header container */
+    justify-content: center;
 }
 
 /* Centered content inside the header */
 .header {
-    width: 90%; 
-    max-width: 1200px; /* Prevents it from stretching too much on large screens */
+    width: 90%;
+    max-width: 1200px;
     display: flex;
-    justify-content: space-between; /* Distributes space between logo, search, and user icons */
-    align-items: center; /* Aligns items vertically */
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+/* Search Bar */
 .search-bar {
-    display: inline-flex;
-    flex: 1 1;
+    display: flex;
+    flex: 1;
     border-radius: 10px;
-    border: 1px solid rgb(114, 175, 169, 0.5);
+    border: 1px solid white;
     overflow: hidden;
     align-items: center;
     max-width: 60%;
 }
 
-.icon {
-    height: 2em;
+/* Unified Icon Sizing */
+.icon, .insta-icon {
+    height: 1.5em;
 }
 
 .search-icon {
     padding-left: 5px;
 }
 
+/* Search Input */
 .search-box {
-    border: 0;
+    border: none;
     flex: 1;
-    background-color: #f8f8f8;
+    background-color: rgb(209, 191, 177);
 }
 
+/* Search Button */
 .search-button {
     color: white;
-    background-color: rgb(114, 175, 169);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 0.8rem;
-    border: 0;
+    border: none;
     border-radius: 8px;
     flex: 0.1;
     font-size: 1em;
 }
 
-/* Logo Styling */
+/* Logo */
 #logo {
-    height: 100px; /* Adjust as needed */
+    height: 10em;
 }
 
-
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40px;
-    color: #f8f8f8;
-    background-color: rgb(39, 135, 127, 0.9);
+    background-color: rgb(209, 191, 177);
 }
 
 nav ul {
@@ -79,76 +92,145 @@ nav ul {
     justify-content: space-evenly;
 }
 
-nav a {
+/* Unified Link Styling */
+a {
+    text-decoration: none;
     color: #f8f8f8;
 }
 
+nav a {
+    font-size: 1.2em;
+}
+
+/* Main Content */
 main {
-    height: 70vh;
+    min-height: 70vh;
 }
 
-a {
-    text-decoration: none;
-}
-
-footer {
-    height: 5vh;
-    border: 3px solid cornflowerblue;
-}
-
-.logo {
-    height: 3em;
-}
-
+/* Hero Section */
 .hero {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: url('images/garden4.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
+    background-color: rgb(209, 191, 177);
+    overflow: hidden;
+    margin: 40px;
 }
 
-.hero-overlay {
+/* Centered Vertical Image */
+.hero-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 35%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Dark overlay for readability */
+    object-fit: cover;
+    z-index: 1;
 }
 
-.hero-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    max-width: 1300px;
+    color: white;
+    font-weight: bold;
     z-index: 2;
-    width: 90%; 
-    max-width: 800px;
-    margin-top: -600px;
+    margin-top: -100px;
 }
 
-.hero-content > h1 {
-    font-size: 3em;
+.hero-text > h1 {
+    font-size: 6em;
+    margin-bottom: 0;
 }
 
-.hero-content > p {
-    font-size: 1.2em;
-    margin-bottom: 50px;
+.hero-text > p {
+    font-size: 2em;
+    margin-bottom: 2em;
 }
 
-.hero-cta-button { 
+/* CTA Button */
+.hero-cta-button {
+    z-index: 2;
     color: white;
     background-color: rgb(193, 68, 46);
-    padding: 0.8rem;
-    border: 0;
-    border-radius: 8px;
-    flex: 0.1;
-    font-size: 1em;
-    width: fit-content;
-    align-self: center;
+    padding: 1.5em;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1em;
+}
+
+/* Cards */
+.recent-projects {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto; /* Centers both h1 and cards */
+    margin-top: 100px;
+}
+
+.recent-projects > h1 {
+    font-size: 3em;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1500px;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.card-image {
+    width: 100%; /* Makes the image fill the card width */
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover;
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.card-title {
+    font-weight: 100;
+    color: #f8f8f8;
+    font-size: 1.3em;
+}
+
+.arrow-icon {
+    padding-left: 10px;
+    width: 0.8em;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    padding: 10px 5%;
+    color: #f8f8f8;
+    border-top: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 20px;
+    width: 20%;
+    justify-content: space-between;
 }
