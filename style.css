@@ -234,3 +234,57 @@ footer {
     width: 20%;
     justify-content: space-between;
 }
+
+/* General styling for all placeholders */
+.icon, .insta-icon, .search-icon, .arrow-icon {
+    display: inline-block;
+    background-color: gray; /* Neutral color for placeholders */
+    border-radius: 5px; /* Slight rounding */
+}
+
+/* Circular placeholders (for social media icons) */
+.social-media .icon {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%; /* Makes it a perfect circle */
+}
+
+/* Rectangular placeholders (for search, buttons, or icons) */
+.search-icon, .arrow-icon {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+}
+
+/* Arrow placeholder */
+.arrow-icon::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg); /* Creates an arrow */
+    margin-left: 5px;
+}
+
+/* Placeholder for missing images */
+.card-image, .hero-image {
+    background-color: lightgray; /* Placeholder color */
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Centered text inside placeholders */
+.card-image::before {
+    content: "Image Placeholder";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
