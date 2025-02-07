@@ -28,7 +28,7 @@ header {
 /* Social Media Icons */
 .social-media {
     display: flex;
-    width: 100px;
+    min-width: 120px;
     justify-content: space-between;
 }
 
@@ -50,6 +50,10 @@ header {
 
 .search-icon {
     padding-left: 5px;
+}
+
+.search-icon-small {
+    display: none;
 }
 
 /* Search Input */
@@ -90,6 +94,7 @@ nav ul {
     width: 60%;
     max-width: 1000px;
     justify-content: space-evenly;
+    padding: 0;
 }
 
 /* Unified Link Styling */
@@ -119,8 +124,6 @@ main {
     overflow: hidden;
     margin-top: 40px;
 }
-
-
 
 /* Centered Vertical Image */
 .hero-image {
@@ -239,6 +242,26 @@ footer {
 }
 
 @media (max-width: 1000px) {
+    .hero-text > h1 {
+        font-size: 4em;
+        margin-bottom: 0;
+    }
+
+    .hero-text > p {
+        font-size: 1em;
+        margin-bottom: 3em;
+    }
+
+    .hero-cta-button {
+        z-index: 2;
+        color: white;
+        background-color: rgb(193, 68, 46);
+        padding: 1.2em;
+        border: none;
+        border-radius: 30px;
+        font-size: 1em;
+    }
+
     .cards {
         display: flex;
         flex-direction: column;
@@ -257,20 +280,38 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+    #logo {
+        height: 5em;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .social-media {
+        min-width: 150px;
+    }
+
+    .search-icon-small {
+        display: inline;
+    }
+
+    nav > ul {
+        display: flex;
+        list-style: none;
+        min-width: 90%;
+        justify-content: space-evenly;
+        font-size: smaller;
+    }
+
+    .hero {
+        margin-top: 20px;
+    }
+
     .hero-text > h1 {
         font-size: 2em;
         margin-bottom: 0;
-    }
-
-    .hero-overlay {
-        position: absolute;
-        width: 100%;
-        min-width: fit-content;
-        height: 100%;
-        object-fit: cover;
-        z-index: 2;
-        background-color: rgb(0, 0, 0, 0.25);
     }
 
     .hero-text > p {
@@ -286,5 +327,33 @@ footer {
         border: none;
         border-radius: 30px;
         font-size: 1em;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card-image {/* Makes the image fill the card width */
+        object-fit: cover;
+        height: auto;
+    }
+
+    footer {
+        font-size: x-small;
+    }
+    
+    /* Footer Links */
+    .footer-links {
+        max-width: 60%;
+        font-size: x-small;
+        gap: 1em;
     }
 }
