@@ -117,13 +117,16 @@ main {
     justify-content: center;
     background-color: rgb(209, 191, 177);
     overflow: hidden;
-    margin: 40px;
+    margin-top: 40px;
 }
+
+
 
 /* Centered Vertical Image */
 .hero-image {
     position: absolute;
     width: 35%;
+    min-width: fit-content;
     height: 100%;
     object-fit: cover;
     z-index: 1;
@@ -151,6 +154,7 @@ main {
     margin-bottom: 2em;
 }
 
+
 /* CTA Button */
 .hero-cta-button {
     z-index: 2;
@@ -160,6 +164,38 @@ main {
     border: none;
     border-radius: 20px;
     font-size: 1.1em;
+}
+
+@media (max-width: 600px) {
+    .hero-text > h1 {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        width: 100%;
+        min-width: fit-content;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+        background-color: rgb(0, 0, 0, 0.25);
+    }
+
+    .hero-text > p {
+        font-size: 1em;
+        margin-bottom: 3em;
+    }
+
+    .hero-cta-button {
+        z-index: 2;
+        color: white;
+        background-color: rgb(193, 68, 46);
+        padding: 1.2em;
+        border: none;
+        border-radius: 30px;
+        font-size: 1em;
+    }
 }
 
 /* Cards */
@@ -234,5 +270,3 @@ footer {
     width: 20%;
     justify-content: space-between;
 }
-
-
