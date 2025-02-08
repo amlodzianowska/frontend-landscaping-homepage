@@ -253,11 +253,7 @@ footer {
     }
 
     .hero-cta-button {
-        z-index: 2;
-        color: white;
-        background-color: rgb(193, 68, 46);
         padding: 1.2em;
-        border: none;
         border-radius: 30px;
         font-size: 1em;
     }
@@ -274,7 +270,7 @@ footer {
         flex-direction: column;
     }
 
-    .card-image {/* Makes the image fill the card width */
+    .card-image {
         object-fit: cover;
         height: auto;
     }
@@ -298,10 +294,7 @@ footer {
     }
 
     nav > ul {
-        display: flex;
-        list-style: none;
         min-width: 90%;
-        justify-content: space-evenly;
         font-size: smaller;
     }
 
@@ -312,38 +305,6 @@ footer {
     .hero-text > h1 {
         font-size: 2em;
         margin-bottom: 0;
-    }
-
-    .hero-text > p {
-        font-size: 1em;
-        margin-bottom: 3em;
-    }
-
-    .hero-cta-button {
-        z-index: 2;
-        color: white;
-        background-color: rgb(193, 68, 46);
-        padding: 1.2em;
-        border: none;
-        border-radius: 30px;
-        font-size: 1em;
-    }
-
-    .cards {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .card-image {/* Makes the image fill the card width */
-        object-fit: cover;
-        height: auto;
     }
 
     footer {
